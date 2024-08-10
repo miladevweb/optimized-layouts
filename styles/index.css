@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  transition: background-color ease-in 500ms, color ease-in 500ms;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html.light {
+  body {
+    color: #0d100f;
+    background-color: white;
+  }
+}
+
+html.dark {
+  body {
+    color: white;
+    background-color: #0d100f;
+  }
+}
+
+.container {
+  --breakout-size: 7dvw;
+  --full-width-size: 8dvw;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns:
+    [full-width-start] var(--full-width-size)
+    [breakout-start] var(--breakout-size)
+    [content-start] minmax(30ch, 1fr) [content-end]
+    var(--breakout-size) [breakout-end]
+    var(--full-width-size) [full-width-end];
+  row-gap: 1.2rem;
+}
+
+.content {
+  grid-column: content;
+}
+
+.breakout {
+  grid-column: breakout;
+}
+
+.full-width {
+  grid-column: full-width;
+}
+
+.container > div:last-child {
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+}
+
+#picture-container {
+  height: 300px;
+  animation: pulse 2s linear infinite;
+  img {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+}
+
+#picture-container.loaded {
+  animation: none;
+  img {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  from {
+    background-color: hsl(0 0% 100% / 0);
+  }
+  50% {
+    background-color: hsl(0 0% 100% / 0.4);
+  }
+  to {
+    background-color: hsl(0 0% 100% / 0);
+  }
+}
+
+picture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 3%;
+  }
+}
+
+@media (width <= 600px) {
+  .container {
+    --breakout-size: 0;
+    --full-width-size: 6dvw;
+  }
+}
