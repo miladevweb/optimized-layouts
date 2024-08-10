@@ -1,10 +1,10 @@
+const pictureContainers = document.querySelectorAll('[data-picture-container]')
+
 const urls = [
   'https://scontent.flim30-1.fna.fbcdn.net/v/t1.6435-9/92097597_2700743383480247_2977929687944134656_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=1iz1-xzZxtAQ7kNvgHYRIKl&_nc_ht=scontent.flim30-1.fna&oh=00_AYAh1vOtIRQQ1b_OxEALRWcj33BWcjQQ1s-9aFnPIRZsSA&oe=66DE42D3',
 
   'https://imgix.bustle.com/uploads/getty/2024/6/14/97963092/incheon-south-korea-march.jpg?w=414&h=259&fit=crop&crop=faces&q=50&dpr=2',
 ]
-
-const pictureContainers = document.querySelectorAll('[data-picture-container]')
 
 function loaded(container, url) {
   container.classList.add('loaded')
