@@ -11,7 +11,7 @@
 body {
   text-wrap: pretty;
   overflow-x: hidden;
-  transition: background-color ease-in 500ms, color ease-in 500ms;
+  transition: background-color ease-in 500ms, color ease-in 400ms;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -115,7 +115,7 @@ picture {
   }
 }
 
-@media (width <= 640px) {
+@media (width <= 700px) {
   h1 {
     font-size: 3rem;
   }
