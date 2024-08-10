@@ -9,6 +9,7 @@
 }
 
 body {
+  text-wrap: pretty;
   overflow-x: hidden;
   transition: background-color ease-in 500ms, color ease-in 500ms;
   font-family: 'Roboto', sans-serif;
@@ -38,32 +39,35 @@ html.dark {
   grid-template-columns:
     [full-width-start] var(--full-width-size)
     [breakout-start] var(--breakout-size)
-    [content-start] minmax(30ch, 1fr) [content-end]
+    [content-start] 1fr [content-end]
     var(--breakout-size) [breakout-end]
     var(--full-width-size) [full-width-end];
-  row-gap: 1.2rem;
+  row-gap: 1.4rem;
 }
 
 .content {
   grid-column: content;
+  background-color: var(--bg);
 }
 
 .breakout {
   grid-column: breakout;
+  background-color: var(--bg);
 }
 
 .full-width {
   grid-column: full-width;
+  background-color: var(--bg);
 }
 
-.container > div:last-child {
+div:has(> button) {
   display: grid;
   place-items: center;
 }
 
 h1 {
-  text-align: center;
-  font-size: 3rem;
+  line-height: 1.1;
+  font-size: 4.5rem;
 }
 
 button {
@@ -71,16 +75,16 @@ button {
   height: 30px;
 }
 
-#picture-container {
+[data-picture-container] {
   height: 300px;
   animation: pulse 2s linear infinite;
   img {
     opacity: 0;
-    transition: opacity 1s ease-in;
+    transition: opacity 0.25s ease-in;
   }
 }
 
-#picture-container.loaded {
+[data-picture-container].loaded {
   animation: none;
   img {
     opacity: 1;
@@ -111,7 +115,11 @@ picture {
   }
 }
 
-@media (width <= 600px) {
+@media (width <= 640px) {
+  h1 {
+    font-size: 3rem;
+  }
+
   .container {
     --breakout-size: 0;
     --full-width-size: 6dvw;

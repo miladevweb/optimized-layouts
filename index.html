@@ -13,8 +13,8 @@
 
   <body>
     <div class="container">
-      <div class="content">
-        <h1>Lorem, ipsum dolor.</h1>
+      <div class="content" style="--bg: hsl(30 100% 50%)">
+        <h2>Content Column</h2>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum tempora expedita officia facilis laudantium accusantium quasi dolorem fugiat fugit amet consequuntur doloribus minima totam,
           rerum, corrupti cupiditate ipsa veniam velit molestias quis error non odio quam! In quaerat iure quidem aut! Temporibus expedita hic totam placeat accusamus, aliquid iusto reiciendis.
@@ -22,7 +22,16 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quae?</p>
       </div>
 
-      <div class="full-width">
+      <div class="breakout" style="--bg: hsl(220 100% 50%)">
+        <h2>Breakout Column</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, provident in? Repellat, vitae quis excepturi facere tempore soluta? Temporibus modi soluta eveniet eos, earum minima iure
+        provident amet ipsa consequuntur laboriosam? Amet, ullam ut dolores consectetur voluptate asperiores dolorem magnam nihil officiis distinctio dolor alias dicta odit quis. Modi, recusandae
+        dolorem velit ad animi ducimus commodi neque, autem tempora quibusdam doloribus maiores eaque eum dolores aliquam mollitia cumque, vel laborum ab harum eos? Quos maxime ab aliquid minus,
+        corporis excepturi autem tempora nisi ad odio consequatur iusto similique exercitationem praesentium earum, quis, rem asperiores illo aspernatur quam quidem ea nostrum.
+      </div>
+
+      <div class="full-width" style="--bg: hsl(280 100% 60%)">
+        <h2>Full Width Column</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos excepturi officiis ratione fugit nesciunt voluptatibus soluta recusandae voluptate dolor numquam! Dolor, non ad eveniet dolorem
           obcaecati nam odit eaque voluptate omnis saepe. Quod, maiores. Quod quibusdam enim molestiae sapiente voluptas iste. Suscipit magnam laboriosam sit veritatis id dolorem, odit ratione odio
@@ -38,18 +47,67 @@
         </div>
       </div>
 
-      <div id="picture-container" class="full-width"></div>
+      <div data-picture-container class="full-width"></div>
 
-      <div class="breakout">
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, ipsum.</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ipsam cupiditate assumenda aut dolorem possimus. Iure eius tempore repellat adipisci exercitationem optio nam ullam!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, ullam dolore sit rem dolores porro?</p>
+      <div class="breakout container">
+        <div class="content" style="--bg: hsl(130 100% 20%)">
+          <h2>Content Column of a Breakout Parent Container</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor atque ab quo, debitis laudantium laboriosam omnis consequuntur hic possimus modi. Possimus doloremque architecto dolor
+            tempora fugit nostrum ipsum, alias officia esse vitae reprehenderit repudiandae enim veritatis quis, quidem omnis! Iure repudiandae sint quod odit, incidunt porro perspiciatis ex provident
+            voluptate.
+          </p>
+        </div>
+
+        <div class="breakout container">
+          <div class="full-width" style="--bg: hsl(0 100% 50%)">
+            <h2>Full Width Column of a Breakout Container inside a Breakout Parent Container</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste dolore repellendus dolorem unde vel aliquid nobis. Deserunt cupiditate obcaecati omnis, reprehenderit ab error unde esse,
+              doloribus magnam consequuntur dolorem itaque placeat enim vero iusto eligendi totam! Voluptatem blanditiis tempore debitis mollitia, odit eius laudantium temporibus minus praesentium
+              atque! Eos, ipsum.
+            </p>
+          </div>
+
+          <div data-picture-container class="breakout"></div>
+
+          <!-- <picture class="breakout">
+            <source type="image/jpg" srcset="https://imgix.bustle.com/uploads/getty/2024/6/14/97963092/incheon-south-korea-march.jpg?w=414&h=259&fit=crop&crop=faces&q=50&dpr=2" />
+            <img src="https://imgix.bustle.com/uploads/getty/2024/6/14/97963092/incheon-south-korea-march.jpg?w=414&h=259&fit=crop&crop=faces&q=50&dpr=2" alt="#" loading="lazy" />
+          </picture> -->
+
+          <div class="content" style="--bg: hsl(200 100% 50%)">
+            <h2>Content Column of a Breakout Column inside a Breakout Parent Container</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure temporibus, debitis nisi maiores, laboriosam ipsum, cupiditate quis aspernatur totam vel sed natus enim dolorem laudantium.
+              Culpa blanditiis omnis vero, unde earum nisi eligendi aliquid ut facere quis repellendus! Molestiae, facere distinctio tenetur doloremque aspernatur dolores amet. Assumenda eius aliquam
+              vel?
+            </p>
+          </div>
+        </div>
+
+        <div class="full-width" style="--bg: hsl(330 100% 50%)">
+          <h2>Full Width Column inside a Breakout Parent Container</h2>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad porro molestias molestiae ex cumque nostrum doloremque? Voluptate illum nesciunt vero similique non amet omnis, ad magnam,
+            saepe aliquid consectetur ducimus ex blanditiis iusto inventore necessitatibus rerum minus eum libero dolorum?
+          </p>
+        </div>
       </div>
 
+      <div class="full-width" style="--bg: hsl(30 100% 50%)">
+        <h2>Full Width Column</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos possimus maxime, neque voluptate aliquid in voluptatum aperiam adipisci porro rerum sequi consequuntur aut dolorum tempore illo
+          quasi inventore fuga nostrum quisquam blanditiis deleniti aspernatur cum vel quos! Consequatur voluptates labore omnis quos quisquam exercitationem hic, cum veniam suscipit necessitatibus.
+          Ad a tempore, soluta exercitationem earum tenetur voluptate voluptatibus corrupti assumenda facere ducimus quas cumque tempora consequatur quisquam labore dolor iste mollitia perferendis
+          nulla ipsam molestias velit. Qui dignissimos rem aperiam dicta eius perspiciatis nisi libero voluptatibus, sapiente ducimus ex, repellat soluta, temporibus dolores blanditiis beatae
+          consequuntur ratione provident voluptas omnis.
+        </p>
+      </div>
       <div class="content">
         <button>CLICK ME!!!</button>
       </div>
     </div>
   </body>
 </html>
-
