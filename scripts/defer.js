@@ -1,3 +1,8 @@
+window.scrollTo({
+  top: 0,
+  behavior: 'smooth',
+})
+
 const pictureContainers = document.querySelectorAll('[data-picture-container]')
 
 const urls = [
